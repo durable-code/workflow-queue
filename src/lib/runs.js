@@ -7,10 +7,11 @@ import { inspect } from 'util'
 import core from '@actions/core'
 import github from '@actions/github'
 
-export default async function ({ octokit, run_id, workflow_ref, before }) {
+export default async function ({ octokit, run_id, workflow_id, before }) {
   // get current run of this workflow
-  const { data: { workflow_runs } } = await octokit.request('GET /repos/{owner}/{repo}/actions/workflows/{workflow_ref}/runs', {
-    workflow_ref.replace(".github", "actions").split("@")[0],
+  const { data: { workflow_runs } } = await octokit.request('GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs', {
+    ...github.context.repo,
+    workflow_id
   })
 
   // find any instances of the same workflow

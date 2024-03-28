@@ -28,7 +28,7 @@ export default async function ({ token, ref, run_id, delay, timeout }) {
   core.info(`searching for workflow runs before ${before}`)
 
   // get previous runs
-  let waiting_for = await runs({ octokit, run_id, workflow_ref, before })
+  let waiting_for = await runs({ octokit, run_id, workflow_id, before })
 
   if (waiting_for.length === 0) {
     core.info('no active run of this workflow found')
