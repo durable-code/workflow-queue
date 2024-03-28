@@ -11,10 +11,6 @@ inputs:
     description: The GitHub token used to check running workflows.
     default: ${{ github.token }}
 
-  workflow-ref:
-    description: The GitHub workflow ref to queue on.
-    required: true
-
   run-id:
     description: The run id of the caller workflow that this action is within.
     required: true

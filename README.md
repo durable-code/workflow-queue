@@ -29,7 +29,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: durable-code/workflow-queue
         with:
-          workflow-ref: ${{ github.workflow_ref }}
           run-id: ${{ github.run_id }}
 
       # only runs additional steps if there is no other instance of `my-workflow.yml` currently running
@@ -40,7 +39,6 @@ jobs:
 | input          | required | default        | description                                             |
 | -------------- | -------- | -------------- | ------------------------------------------------------- |
 | `github-token` | ❌       | `github.token` | The GitHub token used to call the GitHub API            |
-| `workflow-ref` | ✅       | -              | The `${{ github.workflow_ref }}` of the caller workflow |
 | `run-id`       | ✅       | -              | The `${{ github.run_id }}` of the caller workflow       |
 | `timeout`      | ❌       | `600000`       | timeout before we stop trying (in milliseconds)         |
 | `delay`        | ❌       | `10000`        | delay between status checks (in milliseconds)           |

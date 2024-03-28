@@ -10,7 +10,7 @@ import runs from './runs.js'
 // sleep function
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-export default async function ({ token, ref, run_id, delay, timeout }) {
+export default async function ({ token, run_id, delay, timeout }) {
   let timer = 0
 
   // init octokit
