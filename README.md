@@ -1,6 +1,6 @@
 # GitHub Action: Workflow Run Queue
 
-If the same workflow is already running from a previous commit, wait for it to finish
+if a given workflow is already running, that this action isn't running as a part of, then wait for it to finish
 
 [![license][license-img]][license-url]
 [![release][release-img]][release-url]
