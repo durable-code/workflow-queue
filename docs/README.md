@@ -18,6 +18,9 @@ jobs:
   xyz:
     runs-on: ubuntu-latest
 
+    permissions:
+      actions: read
+
     steps:
       - uses: actions/checkout@v2
       - uses: durable-code/workflow-queue
