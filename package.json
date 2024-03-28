@@ -1,12 +1,11 @@
 {
   "private": true,
-  "name": "actions-workflow-queue",
-  "version": "0.0.0-semantically-released",
-  "description": "wait for all `workflow_run` required workflows to be successful",
+  "name": "workflow-queue",
+  "version": "1.4.0",
+  "description": "if a given workflow is already running, that this action isn't running as a part of, then wait for it to finish",
   "author": {
-    "name": "Ahmad Nassri",
-    "email": "ahmad@ahmadnassri.com",
-    "url": "https://ahmadnassri.com"
+    "name": "Liam McInroy",
+    "email": "liam@durable.ai"
   },
   "scripts": {
     "test": "echo nothing to test && exit 0",

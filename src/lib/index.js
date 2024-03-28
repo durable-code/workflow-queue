@@ -50,7 +50,7 @@ export default async function ({ token, run_id, delay, timeout }) {
     }
 
     // zzz
-    core.info(`waiting for #${delay/1000} minutes before polling the status again`)
+    core.info(`waiting for #${delay/1000} seconds before polling the status again`)
     await sleep(delay)
 
     // get the data again

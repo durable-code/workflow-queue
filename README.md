@@ -48,6 +48,9 @@ jobs:
 
 
 ----
+
+Adapted from https://github.com/ahmadnassri/action-workflow-queue
+
 > Author: [Ahmad Nassri](https://www.ahmadnassri.com/) &bull;
 > Twitter: [@AhmadNassri](https://twitter.com/AhmadNassri)
 
