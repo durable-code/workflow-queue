@@ -9,7 +9,7 @@ branding:
 inputs:
   github-token:
     description: The GitHub token used to check running workflows.
-    required: true
+    default: ${{ github.token }}
 
   run-id:
     description: The run id of the caller workflow that this action is within.
